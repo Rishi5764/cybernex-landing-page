@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYBERNETIX // IITB Techfest 2026</title>
+    <!-- Tailwind CSS CDN for instant styling on mobile -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyberBlack: '#050508',
+                        cyberDark: '#0e0e14',
+                        neonCyan: '#00f0ff',
+                        neonMagenta: '#ff007f',
+                    },
+                    fontFamily: {
+                        mono: ['Courier New', 'Courier', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom UI Background HUD Grid Grid */
+        .cyber-grid {
+            background-image: linear-gradient(to right, rgba(0, 240, 255, 0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
+            background-size: 35px 35px;
+        }
+        .glow-cyan:hover {
+            box-shadow: 0 0 25px rgba(0, 240, 255, 0.5);
+        }
+        .glow-magenta:hover {
+            box-shadow: 0 0 25px rgba(255, 0, 127, 0.5);
+        }
+        .glow-text-cyan {
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.6);
+        }
+        .glass-panel {
+            background: rgba(14, 14, 20, 0.7);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 240, 255, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-cyberBlack text-gray-200 font-sans antialiased selection:bg-neonCyan selection:text-black overflow-x-hidden cyber-grid">
+
+    <!-- NAVIGATION HEADER -->
+    <header class="fixed top-0 w-full z-50 glass-panel border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold tracking-widest text-white font-mono">
+                CYBER<span class="text-neonCyan glow-text-cyan">NETIX //</span>
+            </a>
+            
+            <!-- Desktop Navbar -->
+            <nav class="hidden md:flex space-x-8 font-mono text-xs tracking-wider">
+                <a href="#features" class="hover:text-neonCyan transition-colors duration-300">// 01. MODULES</a>
+                <a href="#terminal" class="hover:text-neonCyan transition-colors duration-300">// 02. MAINFRAME</a>
+                <a href="#register" class="hover:text-neonCyan transition-colors duration-300">// 03. SYNC_PORTAL</a>
+            </nav>
+
+            <span class="hidden md:inline-block font-mono text-xs text-neonMagenta border border-neonMagenta/40 px-3 py-1 animate-pulse">
+                TECHFEST_2026.SYS
+            </span>
+
+            <!-- Mobile Menu Switcher -->
+            <button id="menu-btn" class="md:hidden text-neonCyan focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass-panel px-6 py-4 space-y-4 font-mono text-sm border-t border-gray-800">
+            <a href="#features" class="block hover:text-neonCyan">// 01. MODULES</a>
+            <a href="#terminal" class="block hover:text-neonCyan">// 02. MAINFRAME</a>
+            <a href="#register" class="block hover:text-neonCyan">// 03. SYNC_PORTAL</a>
+        </div>
+    </header>
+
+    <!-- HERO DISPLAY -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <!-- Structural Ambient Glows -->
+        <div class="absolute top-1/4 left-1/4 w-80 h-80 bg-neonCyan/10 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-neonMagenta/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto px-6 text-center z-10">
+            <div class="inline-block border border-neonCyan/30 bg-cyberDark/60 px-4 py-1.5 mb-6 rounded-sm">
+                <p class="font-mono text-xs uppercase tracking-[0.2em] text-neonCyan">
+                    [ LINK ACTIVE // IIT BOMBAY COMPETITION DECK ]
+                </p>
+            </div>
+            <h1 class="text-4xl sm:text-6xl md:text-8xl font-black tracking-tighter text-white mb-6 uppercase">
+                HUMANITY <br class="hidden sm:block">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-neonCyan via-indigo-400 to-neonMagenta">
+                    AUGMENTED
+                </span>
+            </h1>
+            <p class="text-gray-400 max-w-xl mx-auto text-sm sm:text-base md:text-lg mb-10 leading-relaxed">
+                Break physical limitations. Seamlessly blend organic tissue with cybernetic engineering, high-throughput neural frameworks, and solid-state sub-dermal systems.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#register" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-neonCyan to-cyan-500 text-black font-bold uppercase tracking-wider text-xs transition-all duration-300 rounded-sm shadow-[0_0_15px_rgba(0,240,255,0.3)] glow-cyan text-center">
+                    Initiate Synchronization
+                </a>
+                <a href="#terminal" class="w-full sm:w-auto px-8 py-4 border border-gray-800 hover:border-neonMagenta/60 text-white font-mono text-xs uppercase tracking-widest transition-all duration-300 rounded-sm hover:text-neonMagenta text-center">
+                    Boot Mainframe.sh
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECH FEATURES MODULE -->
+    <section id="features" class="py-24 max-w-7xl mx-auto px-6 relative">
+        <div class="mb-16 border-l-2 border-neonCyan pl-4">
+            <span class="font-mono text-xs text-neonCyan tracking-widest uppercase">// SYSTEM MODS v4.02</span>
+            <h2 class="text-3xl md:text-5xl font-black text-white uppercase tracking-tight">Cybernetic Enhancements</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Unit 1 -->
+            <div class="glass-panel p-8 relative overflow-hidden group hover:border-neonCyan transition-all duration-300 rounded-sm">
+                <div class="absolute top-0 right-0 p-4 font-mono text-xs text-gray-700 group-hover:text-neonCyan">SYS_01</div>
+                <div class="w-12 h-12 flex items-center justify-center border border-neonCyan/20 text-neonCyan mb-6 rounded-sm bg-neonCyan/5">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2 tracking-wide font-mono">Neural Nexus V2</h3>
+                <p class="text-gray-400 text-xs leading-relaxed">Direct organic brain-to-web linkage. Increases processing output and data comprehension metrics to superhuman baselines.</p>
+            </div>
+
+            <!-- Unit 2 -->
+            <div class="glass-panel p-8 relative overflow-hidden group hover:border-neonMagenta transition-all duration-300 rounded-sm">
+                <div class="absolute top-0 right-0 p-4 font-mono text-xs text-gray-700 group-hover:text-neonMagenta">SYS_02</div>
+                <div class="w-12 h-12 flex items-center justify-center border border-neonMagenta/20 text-neonMagenta mb-6 rounded-sm bg-neonMagenta/5">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2 tracking-wide font-mono">Retinal HUD Matrix</h3>
+                <p class="text-gray-400 text-xs leading-relaxed">Real-time spectrum overlays directly painted onto the optic nerve. Includes dynamic UI thermal mappings and code matrix tracking.</p>
+            </div>
+
+            <!-- Unit 3 -->
+            <div class="glass-panel p-8 relative overflow-hidden group hover:border-neonCyan transition-all duration-300 rounded-sm">
+                <div class="absolute top-0 right-0 p-4 font-mono text-xs text-gray-700 group-hover:text-neonCyan">SYS_03</div>
+                <div class="w-12 h-12 flex items-center justify-center border border-neonCyan/20 text-neonCyan mb-6 rounded-sm bg-neonCyan/5">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2 tracking-wide font-mono">Nanite Sub-Mesh</h3>
+                <p class="text-gray-400 text-xs leading-relaxed">Microscopic biomechanical machines embedded within tissue grids to enable rapid self-healing and complete cellular immune defense.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIVE INTERACTIVE TERMINAL SECTION -->
+    <section id="terminal" class="py-12 max-w-4xl mx-auto px-6">
+        <div class="mb-6 text-center">
+            <h3 class="font-mono text-xs text-neonCyan tracking-widest uppercase">// LIVE SYSTEM HANDSHAKE INTERACTIVE INTERFACE</h3>
+        </div>
+        <div class="glass-panel rounded border border-gray-800 shadow-2xl overflow-hidden">
+            <!-- Window Tab Structure -->
+            <div class="bg-gray-950 px-4 py-2.5 flex items-center justify-between border-b border-gray-900">
+                <div class="flex space-x-1.5">
+                    <div class="w-2.5 h-2.5 rounded-full bg-red-500/40"></div>
+                    <div class="w-2.5 h-2.5 rounded-full bg-yellow-500/40"></div>
+                    <div class="w-2.5 h-2.5 rounded-full bg-green-500/40"></div>
+                </div>
+                <span class="font-mono text-xs text-gray-500 tracking-tight">mainframe@iitb_techfest_2026:~</span>
+                <div class="w-4"></div>
+            </div>
+            
+            <!-- Terminal Output Area -->
+            <div class="p-6 font-mono text-xs text-cyan-400 min-h-[220px] bg-black/90 space-y-2">
+                <p class="text-gray-500">// Welcome Agent. Type 'help' to call options or interact with system logs.</p>
+                <div id="terminal-logs">
+                    <p><span class="text-neonMagenta">[INIT]</span> Security check clear. Protocols initialized.</p>
+                </div>
+                <div class="flex items-center text-neonCyan pt-2">
+                    <span class="mr-2 text-sm">&gt;</span>
+                    <input type="text" id="terminal-input" class="bg-transparent border-none outline-none text-neonCyan w-full focus:ring-0" placeholder="type command..." autofocus>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REGISTRATION / DATA SYNC PORTAL (FORM) -->
+    <section id="register" class="py-24 max-w-md mx-auto px-6">
+        <div class="glass-panel p-8 rounded-sm relative border border-neonMagenta/20">
+            <div class="absolute -top-3 left-6 bg-cyberBlack px-3 font-mono text-xs text-neonMagenta tracking-wider">
+                [ REGISTRATION_PORTAL ]
+            </div>
+            
+            <h3 class="text-xl font-bold text-white mb-2 uppercase tracking-wide">Sync Your Specimen</h3>
+            <p class="text-gray-400 text-xs mb-6">Register identity metadata onto the mainframe array to secure node access allocation.</p>
+            
+            <form id="sync-form" onsubmit="event.preventDefault(); alert('Identity Vector Logged. Synchronization Pipeline Open.');" class="space-y-4 font-mono text-xs">
+                <div>
+                    <label class="block text-gray-500 mb-1.5 uppercase">// Identity Label</label>
+                    <input type="text" required class="w-full bg-cyberDark border border-gray-800 focus:border-neonCyan text-white px-4 py-3 outline-none transition-colors duration-200 rounded-sm" placeholder="e.g. John Doe">
+                </div>
+                <div>
+                    <label class="block text-gray-500 mb-1.5 uppercase">// Comms Vector</label>
+                    <input type="email" required class="w-full bg-cyberDark border border-gray-800 focus:border-neonCyan text-white px-4 py-3 outline-none transition-colors duration-200 rounded-sm" placeholder="name@domain.com">
+                </div>
+                <div>
+                    <label class="block text-gray-500 mb-1.5 uppercase">// Upgrade Selection Priority</label>
+                    <select class="w-full bg-cyberDark border border-gray-800 focus:border-neonCyan text-gray-300 px-4 py-3 outline-none transition-colors duration-200 rounded-sm">
+                        <option>Neural Nexus Upgrades (Brain)</option>
+                        <option>Ocular Modification (Eyes)</option>
+                        <option>Sub-Dermal Tactical Mesh (Body)</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full text-center py-3.5 mt-2 font-bold uppercase tracking-widest border border-neonMagenta text-neonMagenta bg-neonMagenta/5 hover:bg-neonMagenta hover:text-black transition-all duration-300 rounded-sm glow-magenta">
+                    Transmit Identity Data
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER TRACK -->
+    <footer class="border-t border-gray-900 py-10 text-center text-xxs font-mono text-gray-600 tracking-widest">
+        <p>&copy; 2026 CYBERNETIX LABS // IIT BOMBAY TECHFEST WEB DEV COMPETITION ENTRY.</p>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT LOGIC -->
+    <script>
+        // Responsive Menu Code
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Mainframe Terminal Engine Code
+        const terminalInput = document.getElementById('terminal-input');
+        const terminalLogs = document.getElementById('terminal-logs');
+
+        terminalInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                const cmd = this.value.trim().toLowerCase();
+                let logOutput = '';
+
+                if (cmd === 'help') {
+                    logOutput = 'Protocols available: [help] [status] [hack] [clear]';
+                } else if (cmd === 'status') {
+                    logOutput = 'SYS_REPORT: Organic units metrics normal. Hardware latency: 0.02ms. Sync optimal.';
+                } else if (cmd === 'hack') {
+                    logOutput = 'Bypassing node security firewall... Done. IITB Mainframe accepted access connection.';
+                } else if (cmd === 'clear') {
+                    terminalLogs.innerHTML = '';
+                    this.value = '';
+                    return;
+                } else if (cmd !== '') {
+                    logOutput = `Unrecognized entry string: "${cmd}". Attempting recovery trace... Flagged.`;
+                }
+
+                if (cmd !== '') {
+                    terminalLogs.innerHTML += `<p class="text-gray-500">&gt; ${this.value}</p>`;
+                    if (logOutput) {
+                        terminalLogs.innerHTML += `<p class="text-neonCyan">${logOutput}</p>`;
+                    }
+                    this.value = '';
+                    terminalInput.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    </script>
+</body>
+              </html>
+      
